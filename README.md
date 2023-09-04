@@ -1,3 +1,3 @@
 # Playground
 
-Random learning projects etc
+Toma's random python learning projects :D
