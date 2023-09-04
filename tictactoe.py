@@ -8,14 +8,18 @@ def main():
 
     while True:
 
+        # Get player X input
         print_board()
         print()
         playerX = input('X turn: ')
         x, y = playerX.split(' ')
 
+        # Check if input is valid
         if board[int(x)-1][int(y)-1] != ' ':
             print('Try again')
             continue
+
+        # Store input in database, check for winner
         else:
             board[int(x)-1][int(y)-1] = 'X'
             winner = check_winner()
@@ -25,13 +29,18 @@ def main():
                 print(f'{winner} wins!')
                 break
         
+        # Get player Y input
         print_board()
         print()
         playerY = input('Y turn: ')
         x, y = playerY.split(' ')
+
+        # Check if input is valid
         if board[int(x)-1][int(y)-1] != ' ':
             print('Try again')
             continue
+
+        # Store input in database, check for winner
         else:
             board[int(x)-1][int(y)-1] = 'Y'
             winner = check_winner()
@@ -42,10 +51,6 @@ def main():
                 break
 
 
-
-
-def check_input():
-    ...
 def check_winner():
     
     # Check rows
@@ -72,6 +77,7 @@ def check_winner():
     
 def print_board():
 
+    # Prints current game board
     print('  1 2 3')
     print(f'1 {board[0][0]}|{board[0][1]}|{board[0][2]}')
     print('  -+-+-')
