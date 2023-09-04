@@ -6,8 +6,8 @@ indent_increasing = True
 
 try:
     while True:
-        print(' ' * indent, end='')
-        print('🐸🐸🐸🐸🐸🐸')
+        print(" " * indent, end="")
+        print("🐸🐸🐸🐸🐸🐸")
         time.sleep(0.035)
 
         if indent_increasing:
@@ -21,4 +21,4 @@ try:
                 indent_increasing = True
 
 except KeyboardInterrupt:
-    print('Bye!')
+    print("Bye!")
