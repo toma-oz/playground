@@ -3,7 +3,8 @@ board = [
 [' ', ' ', ' '],
 [' ', ' ', ' ']
 ]
-    
+
+
 def main():
 
     while True:
@@ -45,7 +46,8 @@ def check_winner():
     # Check for tie
     elif ' ' not in board[0] and ' ' not in board[1] and ' ' not in board[2]:
         return 'tie'
-    
+
+
 def print_board():
 
     # Prints current game board
@@ -55,6 +57,7 @@ def print_board():
     print(f'2 {board[1][0]}|{board[1][1]}|{board[1][2]}')
     print('  -+-+-')
     print(f'3 {board[2][0]}|{board[2][1]}|{board[2][2]}')
+
 
 def player_x():
 
@@ -116,6 +119,7 @@ def player_y():
                     return f'{winner} wins!'
             else:
                 return False
+
 
 if __name__ == '__main__':
     main()
